@@ -1,5 +1,30 @@
 # Developer docs with subtree example
 
+## Overview
+
+### Add a new document source as a git subtree
+
+1. Add the "remote" with `git remote`
+2. Add the subtree refence with `git subtree add` to the src/content directory
+
+### Project setup
+
+3. Define new collection information (schema) in content/config.ts
+4. Create a page directory for the new collection with the some basic files:
+   1. index.astro
+   2. [...slug].astro
+
+### Update subtree content
+
+Assume some rules are in place such as:
+
+- do not modifiy upstream content (or more research)
+- pulls are explicit with the possibility of future automation
+
+5. Pull changes from subtree upstream with `git subtree pull`
+
+## Git subtree commands
+
 **Add a reference to the remote repository**
 
 ```bash
