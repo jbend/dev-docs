@@ -20,4 +20,11 @@ const connect = defineCollection({
   }),
 });
 
-export const collections = { connect };
+const civil = defineCollection({
+  schema: z.object({
+    title: z.string().default(defaultTitle),
+    description: z.string().default(defaultDescription),
+  }),
+});
+
+export const collections = { connect, civil };
