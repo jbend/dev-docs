@@ -1,29 +1,17 @@
 ---
 // Component Imports
-import Button from "../components/Button.astro";
+import Main from "../layouts/Main.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro + TailwindCSS</title>
-  </head>
-
-  <body>
-    <div class="flex flex-col items-center min-h-screen justify-center gap-8">
-      <p class="text-5xl font-semibold">Using Astro collections</p>
-      <div class="">
-        <a href="/connect" class="p-4 text-2xl">Connect</a>
-      </div>
-      <div class="">
-        <a href="/civil" class="p-4 text-2xl">Civil</a>
-      </div>
-    </div>
-  </body>
-</html>
+<Main title="git-subtree test">
+  <p class="text-5xl font-semibold">Using Astro collections</p>
+  <div class="">
+    <a href="/connect" class="p-4 text-2xl">Connect</a>
+  </div>
+  <div class="">
+    <a href="/civil" class="p-4 text-2xl">Civil</a>
+  </div>
+</Main>

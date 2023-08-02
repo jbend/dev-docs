@@ -1,15 +1,18 @@
 ---
 import { getCollection } from "astro:content";
+import Main from "../../layouts/Main.astro";
 
 const docs = await getCollection("civil");
 ---
 
-<h1 class="text-4xl font-bold">Connect developer documentation</h1>
-{
-  docs.map((doc) => (
-    <div class="my-4">
-      <h2 class="text-lg font-semibold">{doc.data.title}</h2>
-      <p>{doc.data.description}</p>
-    </div>
-  ))
-}
+<Main title="Civil Content">
+  <h1 class="text-4xl font-bold">Connect developer documentation</h1>
+  {
+    docs.map((doc) => (
+      <div class="my-4">
+        <h2 class="text-lg font-semibold">{doc.data.title}</h2>
+        <p>{doc.data.description}</p>
+      </div>
+    ))
+  }
+</Main>
